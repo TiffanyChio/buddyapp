@@ -1,0 +1,43 @@
+{
+  "expo": {
+    "name": "Buddy",
+    "slug": "buddyapp",
+    "privacy": "public",
+    "sdkVersion": "36.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "version": "1.1.7",
+    "orientation": "portrait",
+    "icon": "./src/assets/apple-touch-icon.png",
+    "splash": {
+      "image": "./src/assets/buddysplash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.ada.buddyapp",
+      "infoPlist": {
+        "NSLocationAlwaysUsageDescription": "This app uses location data to help users send out trip information and also to determine if user is near their assigned geofence.",
+        "NSLocationWhenInUseUsageDescription": "This app uses location data to help users send out trip information and also to determine if user is near their assigned geofence.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "This app uses location data to help users send out trip information and also to determine if user is near their assigned geofence.",
+        "UIBackgroundModes": [
+          "location",
+          "fetch"
+        ]
+      },
+      "config": {
+        "googleMapsApiKey": "YOUR GOOGLE iOS SDK API KEY HERE"
+      }
+    }
+  }
+}
