@@ -4,16 +4,21 @@ Buddy is a personal safety iOS app with three main features:
 2. At the press of a button, the trip page will be updated with a danger status. Additionally emergency contacts saved to the app will get a text alert. 
 3. The Check-In feature sends a text alert to emergency contacts if the user has not returned to a saved location (home, work, or school) within a designated time period. 
 
-This repository contains the code for the iOS mobile component. 
+This repository contains the code for the iOS mobile component built with React-Native and Expo. The [back-end API](https://github.com/TiffanyChio/buddyapi) and [web component](https://github.com/TiffanyChio/buddyweb) will need to be installed and deployed for the App to work as intended.
+
+[Visit youtube for a short video demo]() of the app (no audio available). 
+
+## Prerequisites
+Obtain a Google Maps iOS SDK key [here](https://developers.google.com/maps/documentation/ios-sdk/intro) and a Google Maps Geocoding API key [here](https://developers.google.com/maps/documentation/geocoding/start). 
 
 ## Installation
-Clone this repository and run
+Clone this repository and install project dependencies by running:
 
 ```sh
 npm install
 ```
 
-Obtain a Google Maps iOS SDK key [here](https://developers.google.com/maps/documentation/ios-sdk/intro) and a Google Maps Geocoding API key [here](https://developers.google.com/maps/documentation/geocoding/start). The iOS SDK key should be placed in app.json:
+The Google Maps iOS SDK key should be placed in app.json:
 
 ```sh
 "config": {
@@ -21,9 +26,7 @@ Obtain a Google Maps iOS SDK key [here](https://developers.google.com/maps/docum
       }
 ```
 
-The geocoding key should be placed in a .env file in the root of your folder with the .env added to your gitignore file. 
-
-Install and deploy the corresponding back-end and web-based front-end component of the app. 
+The geocoding key should be placed in a .env file in the root of your project repository. Please verify that .env is included in the .gitignore file also located within the root directory. If .env is missing from your .gitignore file then your API key may be compromised in the future.  
 
 The app can run on an iOS simulator with the terminal command:
 
@@ -31,6 +34,4 @@ The app can run on an iOS simulator with the terminal command:
 expo start
 ```
 
-Please be sure to verify that the locations permission is set to "ALWAYS". Due to iOS 13's location permission changes the app cannot run on a physical device through Expo but can run on [TestFlight](https://developer.apple.com/testflight/). 
-
-
+Please be sure to verify that the locations permission is set to "ALWAYS". Due to iOS 13's location permission changes the app cannot run on a physical device through Expo but can run via [TestFlight](https://developer.apple.com/testflight/). 
