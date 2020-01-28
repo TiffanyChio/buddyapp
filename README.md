@@ -35,3 +35,10 @@ expo start
 ```
 
 Please be sure to verify that the locations permission is set to "ALWAYS". Due to iOS 13's location permission changes the app cannot run on a physical device through Expo but can run via [TestFlight](https://developer.apple.com/testflight/). 
+
+## Common Issues
+### Trouble signing into the App due to missing btoa.
+Run ```npm install```. The issue may be due to the axios version.
+
+### Geofences do not appear to work.
+Make sure that the location permissions for the client that the app is running on: Expo for iOS simulator or TestFlight on physical devices is set to ALWAYS.
